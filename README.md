@@ -62,8 +62,8 @@
 bash
 ./gradlew test
 Для параметризованного теста (пример):
-
-java
+```
+```java
 // В коде теста укажите параметры:
 Путь к папке браузера
 String userDataDir = "C:\\wd\\User Data";
@@ -74,7 +74,7 @@ String profileName = "Default";
             "inn1", //Имя пользователя1
             "inn2", //Имя пользователя2
             })
-
+```
 ⚙️ Конфигурация
 Настройте параметры в src/test/resources/junit-platform.properties:
 
