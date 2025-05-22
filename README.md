@@ -1,8 +1,4 @@
-# autotest-Diadoc
-```shell
-C:\Users\Zm500\IdeaProjects\autotest-diadoc\gradlew.bat clean test allureReport
 
-```
 # Контур.Диадок: Автотесты для подписания документов (Java)
 
 [![Java](https://img.shields.io/badge/Java-11%2B-blue)](https://www.java.com/)
