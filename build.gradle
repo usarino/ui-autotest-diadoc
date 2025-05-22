@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.12.0'
+}
+
+java {
+    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_21
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'junit.jupiter.extensions.autodetection.enabled', 'true' // Для автоматического обнаружения расширений
+}
+
+dependencies {
+    testImplementation 'com.codeborne:selenide:7.7.3' //Selenide
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.3'
+    // Allure
+    testImplementation 'io.qameta.allure:allure-junit5:2.29.1' // Актуальная версия Allure
+    testRuntimeOnly 'org.aspectj:aspectjweaver:1.9.23' // Необходимо для работы Allure
+    testImplementation 'io.qameta.allure:allure-selenide:2.24.0' // Интеграция Allure + Selenide
+}
+allure {
+    autoconfigure = true
+    version = '2.29.0' // Версия должна совпадать с версией Allure
+
+    useJUnit5 {
+        version = '2.29.0' // Версия адаптера для JUnit5
+    }
+}
