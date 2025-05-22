@@ -58,7 +58,6 @@ C:\Users\Zm500\IdeaProjects\autotest-diadoc\gradlew.bat clean test allureReport
 ├── gradlew
 └── gradlew.bat
 ## 🚀 Запуск
-## 🚀 Запуск
 1. Соберите проект:
 ```bash
 ./gradlew clean build
